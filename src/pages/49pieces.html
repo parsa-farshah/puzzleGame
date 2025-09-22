@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puzzle Game</title>
+    <link rel="stylesheet" href="../styles/output.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section
+      class="w-full h-[100vh] bg-[#ffffdd] flex justify-center items-center relative"
+    >
+      <div
+        id="boxImage"
+        class="w-[300px] h-[500px] shadow-2xl border flex flex-wrap *:w-[33.3%] *:h-[166px] *:border"
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <!-- images pieces -->
+      <div class="imagesBox">
+        <img
+          data-numb="1"
+          class="w-[100px] h-[166px] absolute top-30 left-11"
+          src="../images/1.jpg"
+          alt=""
+        />
+        <img
+          data-numb="2"
+          class="w-[100px] h-[166px] absolute top-[20%] left-[20%]"
+          src="../images/2.jpg"
+          alt=""
+        /><img
+          data-numb="3"
+          class="w-[100px] h-[166px] absolute top-[20%] left-[80%]"
+          src="../images/3.jpg"
+          alt=""
+        />
+        <img
+          data-numb="4"
+          class="w-[100px] h-[166px] absolute top-[70%] left-[40%]"
+          src="../images/4.jpg"
+          alt=""
+        />
+        <img
+          data-numb="5"
+          class="w-[100px] h-[166px] absolute top-[60%] left-[10%]"
+          src="../images/5.jpg"
+          alt=""
+        />
+        <img
+          data-numb="6"
+          class="w-[100px] h-[166px] absolute top-[60%] left-[30%]"
+          src="../images/6.jpg"
+          alt=""
+        />
+        <img
+          data-numb="7"
+          class="w-[100px] h-[166px] absolute top-[50%] left-[70%]"
+          src="../images/7.jpg"
+          alt=""
+        />
+        <img
+          data-numb="8"
+          class="w-[100px] h-[166px] absolute top-[10%] left-[75%]"
+          src="../images/8.jpg"
+          alt=""
+        />
+        <img
+          data-numb="9"
+          class="w-[100px] h-[166px] absolute top-[70%] left-[75%]"
+          src="../images/9.jpg"
+          alt=""
+        />
+      </div>
+      <!------------------------- menu ----------------------------->
+      <div
+        class="w-[150px] h-fit absolute top-5 left-5 bg-amber-400 rounded-3xl flex justify-center items-center inset-shadow-sm inset-shadow-black flex-wrap py-6"
+      >
+        <figure class="w-full flex justify-center items-center">
+          <img
+            id="btnMenu"
+            class="w-[30px] h-[30px] cursor-pointer hover:scale-110 duration-500"
+            src="../images/menu.png"
+            alt=""
+          />
+        </figure>
+        <div id="subMenu" class="hidden flex-col gap-3 mt-3 items-center">
+          <span class="font-bold"><a href="../../index.html">Home</a></span>
+          <span class="font-bold"><a href="#">9 Pieces Game</a></span>
+          <span class="font-bold capitalize">My social</span>
+        </div>
+      </div>
+    </section>
+    <!-- congratulations -->
+    <div
+      id="congratulation"
+      class="w-full h-full bg-[#ffffff1a] backdrop-blur-sm fixed z-50 top-0 left-0 hidden justify-center items-center"
+    >
+      <div
+        class="w-[300px] h-[300px] bg-amber-50 border-4 rounded-4xl flex flex-col justify-center items-center"
+      >
+        <img
+          class="w-[100px] h-[100px]"
+          src="../images/congratulations.png"
+          alt=""
+        />
+        <span class="text-2xl font-bold">You Win congratulation</span>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let btnMenu = document.querySelector("#btnMenu");
+    let subMenu = document.querySelector("#subMenu");
+    let congratulation = document.querySelector("#congratulation");
+    let divHeight = document.querySelectorAll("#boxImage>div");
+    let xh = 0;
+    let divSHeightWidth = [];
+
+    divHeight.forEach((val) => {
+      xh = val.getBoundingClientRect();
+      divSHeightWidth.push(xh);
+    });
+    console.log(divSHeightWidth);
+    let divNinewidth = divSHeightWidth[0].x;
+    let divNineHeight = divSHeightWidth[0].y;
+    let divEightWidth = divSHeightWidth[1].x;
+    let divEightHeight = divSHeightWidth[1].y;
+    let divSevenWidth = divSHeightWidth[2].x;
+    let divSevenHeight = divSHeightWidth[2].y;
+    let divSixWidth = divSHeightWidth[3].x;
+    let divSixHeight = divSHeightWidth[3].y;
+    let divFiveWidth = divSHeightWidth[4].x;
+    let divFiveHeight = divSHeightWidth[4].y;
+    let divFourWidth = divSHeightWidth[5].x;
+    let divFourHeight = divSHeightWidth[5].y;
+    let divThreeWidth = divSHeightWidth[6].x;
+    let divThreeHeight = divSHeightWidth[6].y;
+    let divTwoWidth = divSHeightWidth[7].x;
+    let divTwoHeight = divSHeightWidth[7].y;
+    let divOneWidth = divSHeightWidth[8].x;
+    let divOneHeight = divSHeightWidth[8].y;
+    console.log(divSixHeight);
+
+    console.log(divSixWidth);
+
+    // let mx = 0;
+    // let my = 0;
+    let flag = 0;
+    btnMenu.addEventListener("click", () => {
+      subMenu.classList.toggle("hidden");
+      subMenu.classList.toggle("flex");
+    });
+    let _imagesBox = document.querySelector("#imagesBox");
+    let _images = document.querySelectorAll(".imagesBox>img");
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    _images.forEach((val) => {
+      val.ondragstart = () => false;
+      val.addEventListener("mousedown", () => {
+        val.addEventListener("mousemove", para);
+        val.style.zIndex = "49";
+      });
+      val.addEventListener("mouseup", () => {
+        val.removeEventListener("mousemove", para);
+        val.style.zIndex = "0";
+        let status = val.getAttribute("data-numb");
+        console.log(`status:${status}`);
+
+        if (
+          y > divOneHeight - 93 &&
+          y < divOneHeight + 93 &&
+          status == 1 &&
+          divOneWidth - 57 <= x &&
+          x <= divOneWidth + 57
+        ) {
+          flag++;
+        } else if (
+          y > divTwoHeight - 93 &&
+          y < divTwoHeight + 93 &&
+          status == 2 &&
+          divTwoWidth - 57 <= x &&
+          x <= divTwoWidth + 57
+        ) {
+          flag++;
+        } else if (
+          y > divThreeHeight - 93 &&
+          y < divThreeHeight + 93 &&
+          status == 3 &&
+          divThreeWidth - 57 <= x &&
+          x <= divThreeWidth + 57
+        ) {
+          flag++;
+        } else if (
+          y > divFourHeight - 93 &&
+          y < divFourHeight + 93 &&
+          status == 4 &&
+          divFourWidth - 57 <= x &&
+          x <= divFourWidth + 57
+        ) {
+          flag++;
+        } else if (
+          y > divFiveHeight - 93 &&
+          y < divFiveHeight + 93 &&
+          status == 5 &&
+          divFiveWidth - 57 <= x &&
+          x <= divFiveWidth + 57
+        ) {
+          flag++;
+        } else if (
+          y > divSixHeight - 93 &&
+          y < divSixHeight + 93 &&
+          status == 6 &&
+          divSixWidth - 57 <= x &&
+          x <= divSixWidth + 57
+        ) {
+          flag++;
+        } else if (
+          y > divSevenHeight - 93 &&
+          y < divSevenHeight + 93 &&
+          status == 7 &&
+          divSevenWidth - 57 <= x &&
+          x <= divSevenWidth + 57
+        ) {
+          flag++;
+        } else if (
+          y > divEightHeight - 93 &&
+          y < divEightHeight + 93 &&
+          status == 8 &&
+          divEightWidth - 57 <= x &&
+          x <= divEightWidth + 57
+        ) {
+          flag++;
+        } else if (
+          y > divNineHeight - 93 &&
+          y < divNineHeight + 93 &&
+          status == 9 &&
+          divNinewidth - 57 <= x &&
+          x <= divNinewidth + 57
+        ) {
+          flag++;
+        }
+        console.log(flag);
+        console.log(x);
+        console.log(y);
+        if (flag === 9) {
+          congratulation.classList.remove("hidden");
+          congratulation.classList.add("flex");
+          setTimeout(() => {
+            congratulation.classList.add("hidden");
+            congratulation.classList.remove("flex");
+          }, 1500);
+        }
+      });
+    });
+    let x;
+    let y;
+    function para(e) {
+      x = e.clientX;
+      y = e.clientY;
+      e.target.classList.add("myDrag");
+      e.target.style.top = `${y}px`;
+      e.target.style.left = `${x}px`;
+    }
+  </script>
+</html>

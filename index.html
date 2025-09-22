@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puzzle Game</title>
+    <link rel="stylesheet" href="src/styles/output.css" />
+  </head>
+  <body>
+    <main class="w-full h-[100vh] bg-white flex justify-center items-center">
+      <section
+        class="w-[95%] h-[95%] bg-[#ffffdd] flex justify-center items-center relative"
+      >
+        <img
+          class="w-[300px] h-[500px] shadow-2xl"
+          src="src/images/image.jpg"
+          alt=""
+        />
+        <!------------------------- menu ----------------------------->
+        <div
+          class="w-[150px] h-fit absolute top-0 left-0 bg-amber-400 rounded-3xl flex justify-center items-center inset-shadow-sm inset-shadow-black flex-wrap py-6"
+        >
+          <figure class="w-full flex justify-center items-center">
+            <img
+              id="btnMenu"
+              class="w-[30px] h-[30px] cursor-pointer hover:scale-110 duration-500"
+              src="src/images/menu.png"
+              alt=""
+            />
+          </figure>
+          <div id="subMenu" class="hidden flex-col items-center gap-3 mt-3">
+            <span class="font-bold"><a href="#">Home</a></span>
+            <span class="font-bold"
+              ><a href="src/pages/49pieces.html">9 Pieces Game</a></span
+            >
+            <span class="font-bold capitalize">My social</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script>
+    let btnMenu = document.querySelector("#btnMenu");
+    let subMenu = document.querySelector("#subMenu");
+    btnMenu.addEventListener("click", () => {
+      subMenu.classList.toggle("hidden");
+      subMenu.classList.toggle("flex");
+    });
+  </script>
+</html>
