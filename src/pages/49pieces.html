@@ -5,123 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Puzzle Game</title>
     <link rel="stylesheet" href="../styles/output.css" />
-    <link rel="shortcut icon" href="../images/puzzle.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/puzzle.png" type="image/x-icon" />
   </head>
   <body>
-    <section
-      class="w-full h-[100vh] bg-[#ffffdd] border-2 flex justify-center items-center relative overflow-hidden"
-    >
-      <div
-        id="boxImage"
-        class="w-[300px] h-[500px] shadow-2xl border flex flex-wrap *:w-[33.3%] *:h-[166px] *:border"
+    <main class="w-full h-[100vh] bg-white flex justify-center items-center">
+      <section
+        class="w-[95%] h-[95%] rounded-4xl border-[#00000031] bg-[#ffffdd] border-2 flex justify-center items-center relative overflow-hidden"
       >
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <!-- images pieces -->
-      <div class="imagesBox">
-        <img
-          data-numb="1"
-          class="w-[100px] h-[166px] absolute top-30 left-11"
-          src="../images/1.jpg"
-          alt=""
-        />
-        <img
-          data-numb="2"
-          class="w-[100px] h-[166px] absolute top-[20%] left-[20%]"
-          src="../images/2.jpg"
-          alt=""
-        /><img
-          data-numb="3"
-          class="w-[100px] h-[166px] absolute top-[20%] left-[80%]"
-          src="../images/3.jpg"
-          alt=""
-        />
-        <img
-          data-numb="4"
-          class="w-[100px] h-[166px] absolute top-[70%] left-[40%]"
-          src="../images/4.jpg"
-          alt=""
-        />
-        <img
-          data-numb="5"
-          class="w-[100px] h-[166px] absolute top-[60%] left-[10%]"
-          src="../images/5.jpg"
-          alt=""
-        />
-        <img
-          data-numb="6"
-          class="w-[100px] h-[166px] absolute top-[60%] left-[30%]"
-          src="../images/6.jpg"
-          alt=""
-        />
-        <img
-          data-numb="7"
-          class="w-[100px] h-[166px] absolute top-[50%] left-[70%]"
-          src="../images/7.jpg"
-          alt=""
-        />
-        <img
-          data-numb="8"
-          class="w-[100px] h-[166px] absolute top-[10%] left-[75%]"
-          src="../images/8.jpg"
-          alt=""
-        />
-        <img
-          data-numb="9"
-          class="w-[100px] h-[166px] absolute top-[70%] left-[75%]"
-          src="../images/9.jpg"
-          alt=""
-        />
-      </div>
-      <!------------------------- menu ----------------------------->
-      <div
-        class="w-[60px] sm:w-[150px] h-fit absolute top-5 left-5 bg-amber-400 rounded-3xl flex justify-center items-center inset-shadow-sm inset-shadow-black flex-wrap py-6"
-      >
-        <figure class="w-full flex justify-center items-center">
+        <div
+          id="boxImage"
+          class="w-[300px] h-[500px] shadow-2xl border flex flex-wrap *:w-[33.3%] *:h-[166px] *:border"
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <!-- images pieces -->
+        <div class="imagesBox">
           <img
-            id="btnMenu"
-            class="w-[30px] h-[30px] cursor-pointer hover:scale-110 duration-500"
-            src="../images/menu.png"
+            data-numb="1"
+            class="w-[100px] h-[166px] absolute top-30 left-11"
+            src="../images/1.jpg"
             alt=""
           />
-        </figure>
-        <div id="subMenu" class="hidden flex-col gap-3 mt-3 items-center">
-          <span class="text-[12px] sm:text-[16px] font-bold"
-            ><a href="../../index.html">Home</a></span
-          >
-          <span class="text-[12px] sm:text-[16px] font-bold"
-            ><a href="#">Game</a></span
-          >
-          <span class="text-[12px] sm:text-[16px] font-bold capitalize"
-            >My social</span
-          >
+          <img
+            data-numb="2"
+            class="w-[100px] h-[166px] absolute top-[20%] left-[20%]"
+            src="../images/2.jpg"
+            alt=""
+          /><img
+            data-numb="3"
+            class="w-[100px] h-[166px] absolute top-[20%] left-[80%]"
+            src="../images/3.jpg"
+            alt=""
+          />
+          <img
+            data-numb="4"
+            class="w-[100px] h-[166px] absolute top-[70%] left-[40%]"
+            src="../images/4.jpg"
+            alt=""
+          />
+          <img
+            data-numb="5"
+            class="w-[100px] h-[166px] absolute top-[60%] left-[10%]"
+            src="../images/5.jpg"
+            alt=""
+          />
+          <img
+            data-numb="6"
+            class="w-[100px] h-[166px] absolute top-[60%] left-[30%]"
+            src="../images/6.jpg"
+            alt=""
+          />
+          <img
+            data-numb="7"
+            class="w-[100px] h-[166px] absolute top-[50%] left-[70%]"
+            src="../images/7.jpg"
+            alt=""
+          />
+          <img
+            data-numb="8"
+            class="w-[100px] h-[166px] absolute top-[10%] left-[75%]"
+            src="../images/8.jpg"
+            alt=""
+          />
+          <img
+            data-numb="9"
+            class="w-[100px] h-[166px] absolute top-[70%] left-[75%]"
+            src="../images/9.jpg"
+            alt=""
+          />
+        </div>
+        <!------------------------- menu ----------------------------->
+        <div
+          class="w-[60px] md:w-[150px] h-fit absolute top-5 left-5 bg-amber-400 rounded-3xl flex justify-center items-center inset-shadow-sm inset-shadow-black flex-wrap py-6"
+        >
+          <figure class="w-full flex justify-center items-center">
+            <img
+              id="btnMenu"
+              class="w-[30px] h-[30px] cursor-pointer hover:scale-110 duration-500"
+              src="../images/menu.png"
+              alt=""
+            />
+          </figure>
+          <div id="subMenu" class="hidden flex-col gap-3 mt-3 items-center">
+            <span class="text-[12px] sm:text-[16px] font-bold"
+              ><a href="../../index.html">Home</a></span
+            >
+            <span class="text-[12px] sm:text-[16px] font-bold"
+              ><a href="#">Game</a></span
+            >
+            <span class="text-[12px] sm:text-[16px] font-bold capitalize"
+              >My social</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- congratulations -->
+      <div
+        id="congratulation"
+        class="w-full h-full bg-[#ffffff1a] backdrop-blur-sm fixed z-50 top-0 left-0 hidden justify-center items-center"
+      >
+        <div
+          class="w-[300px] h-[300px] bg-amber-50 border-4 rounded-4xl flex flex-col justify-center items-center"
+        >
+          <img
+            class="w-[100px] h-[100px]"
+            src="../images/congratulations.png"
+            alt=""
+          />
+          <span class="text-2xl font-bold">You Win congratulation</span>
         </div>
       </div>
-    </section>
-    <!-- congratulations -->
-    <div
-      id="congratulation"
-      class="w-full h-full bg-[#ffffff1a] backdrop-blur-sm fixed z-50 top-0 left-0 hidden justify-center items-center"
-    >
-      <div
-        class="w-[300px] h-[300px] bg-amber-50 border-4 rounded-4xl flex flex-col justify-center items-center"
-      >
-        <img
-          class="w-[100px] h-[100px]"
-          src="../images/congratulations.png"
-          alt=""
-        />
-        <span class="text-2xl font-bold">You Win congratulation</span>
-      </div>
-    </div>
+    </main>
   </body>
 
   <script>
