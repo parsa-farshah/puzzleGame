@@ -22,7 +22,7 @@ This project is fully **responsive** and works seamlessly on desktop, tablet, an
 ---
 
 ## 🔗 Live Demo
-👉 [Try the Puzzle Game](https://parsa-farshah.github.io/puzzleGame/src/pages/mySocial.html)
+👉 [Try the Puzzle Game](https://parsa-farshah.github.io/puzzleGame/)
 
 ---
 
