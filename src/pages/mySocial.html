@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puzzle Game</title>
+    <link rel="stylesheet" href="../styles/output.css" />
+    <link rel="shortcut icon" href="../images/puzzle.png" type="image/x-icon" />
+  </head>
+  <body>
+    <main class="w-full h-[100vh] bg-white flex justify-center items-center">
+      <section
+        class="w-[95%] h-[95%] rounded-4xl border-[#00000031] bg-[#ffffdd] border-2 flex justify-center items-center relative overflow-hidden"
+      >
+        <div
+          class="w-[300px] h-[400px] border rounded-4xl overflow-hidden inset-shadow-sm inset-shadow-black"
+        >
+          <img
+            class="w-full h-[70%] object-cover object-top rounded-4xl"
+            src="../images/parsa3.jpg"
+            alt=""
+          />
+          <h4 class="text-2xl font-bold text-center mt-2">Parsa Dehghan Pour</h4>
+          <div class="flex justify-around mt-2">
+            <a href="http://github.com/parsa-farshah"
+              ><img
+                class="w-[60px] h-[60px] hover:scale-110 duration-300"
+                src="../images/github.png"
+                alt=""
+            /></a>
+            <a
+              href=" https://www.instagram.com/parsa_dehghanpour_dv?igsh=eHkwNWhsa3I4ZWVp"
+              ><img
+                class="w-[60px] h-[60px] hover:scale-110 duration-300"
+                src="../images/instagram.png"
+                alt="" /></a
+            ><a
+              href="http://linkedin.com/in/parsa-dehghan-pour-farashah-85ab04250"
+              ><img
+                class="w-[60px] h-[60px] hover:scale-110 duration-300"
+                src="../images/linkedin.png"
+                alt=""
+            /></a>
+          </div>
+        </div>
+        <!------------------------- menu ----------------------------->
+        <div
+          class="w-[60px] md:w-[150px] h-fit absolute top-5 left-5 bg-amber-400 rounded-3xl flex justify-center items-center inset-shadow-sm inset-shadow-black flex-wrap py-6"
+        >
+          <figure class="w-full flex justify-center items-center">
+            <img
+              id="btnMenu"
+              class="w-[30px] h-[30px] cursor-pointer hover:scale-110 duration-500"
+              src="../images/menu.png"
+              alt=""
+            />
+          </figure>
+          <div id="subMenu" class="hidden flex-col items-center gap-3 mt-3">
+            <span class="text-[12px] sm:text-[16px] font-bold"
+              ><a href="../../index.html">Home</a></span
+            >
+            <span class="text-[12px] sm:text-[16px] font-bold"
+              ><a href="49pieces.html">Game</a></span
+            >
+            <span class="text-[12px] sm:text-[16px] font-bold capitalize"
+              ><a href="#">My social</a></span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="../js/social.js"></script>
+</html>
