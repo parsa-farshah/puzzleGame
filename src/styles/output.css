@@ -12,7 +12,6 @@
     --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-gray-600: oklch(44.6% 0.03 256.802);
-    --color-gray-900: oklch(21% 0.034 264.665);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -191,9 +190,6 @@
   .top-5 {
     top: calc(var(--spacing) * 5);
   }
-  .top-10 {
-    top: calc(var(--spacing) * 10);
-  }
   .top-30 {
     top: calc(var(--spacing) * 30);
   }
@@ -217,9 +213,6 @@
   }
   .left-5 {
     left: calc(var(--spacing) * 5);
-  }
-  .left-10 {
-    left: calc(var(--spacing) * 10);
   }
   .left-11 {
     left: calc(var(--spacing) * 11);
@@ -254,12 +247,6 @@
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
-  .mt-4 {
-    margin-top: calc(var(--spacing) * 4);
-  }
-  .mt-7 {
-    margin-top: calc(var(--spacing) * 7);
-  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -274,9 +261,6 @@
   }
   .h-\[30px\] {
     height: 30px;
-  }
-  .h-\[60\%\] {
-    height: 60%;
   }
   .h-\[60px\] {
     height: 60px;
@@ -392,14 +376,8 @@
   .bg-amber-50 {
     background-color: var(--color-amber-50);
   }
-  .bg-amber-200 {
-    background-color: var(--color-amber-200);
-  }
   .bg-amber-400 {
     background-color: var(--color-amber-400);
-  }
-  .bg-red-600 {
-    background-color: var(--color-red-600);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -420,11 +398,20 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
+  .text-\[6px\] {
+    font-size: 6px;
+  }
+  .text-\[7px\] {
+    font-size: 7px;
+  }
+  .text-\[8px\] {
+    font-size: 8px;
+  }
+  .text-\[9px\] {
+    font-size: 9px;
+  }
   .text-\[12px\] {
     font-size: 12px;
-  }
-  .text-\[14px\] {
-    font-size: 14px;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -492,16 +479,6 @@
     :is(& > *) {
       border-style: var(--tw-border-style);
       border-width: 1px;
-    }
-  }
-  .\*\:border-\[\#3030303f\] {
-    :is(& > *) {
-      border-color: #3030303f;
-    }
-  }
-  .\*\:border-\[\#3030308a\] {
-    :is(& > *) {
-      border-color: #3030308a;
     }
   }
   .\*\:border-\[\#b111113f\] {
