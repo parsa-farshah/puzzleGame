@@ -47,13 +47,22 @@ This project is fully **responsive** and works seamlessly on desktop, tablet, an
 ## 📸 Project Screenshots
 
 ### 🌟 Overview
-<img src="assets/screenshots/cover.png" alt="Puzzle Game Overview" width="100%">
+<img src="src/images/cover.png" alt="Puzzle Game Overview" width="100%">
 
 ### 💻 Desktop View
-<img src="assets/screenshots/desktop.png" alt="Desktop View" width="100%">
+<img src="src/images/1.png" alt="Desktop View" width="100%">
+
+### 💻 Desktop View
+<img src="src/images/2.png" alt="Desktop View" width="100%">
 
 ### 📱 Tablet View
-<img src="assets/screenshots/tablet.png" alt="Tablet View" width="60%">
+<img src="src/images/4.png" alt="Tablet View" width="60%">
+
+### 📱 Tablet View
+<img src="src/images/5.png" alt="Tablet View" width="60%">
 
 ### 📱 Mobile View
-<img src="assets/screenshots/mobile.png" alt="Mobile View" width="45%">
+<img src="src/images/7.png" alt="Mobile View" width="45%">
+
+### 📱 Mobile View
+<img src="src/images/8.png" alt="Mobile View" width="45%">
